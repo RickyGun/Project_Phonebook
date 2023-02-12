@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS PHONEBOOK
+( name VARCHAR( 15 )  CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL ,
+  city VARCHAR( 15 )  CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL ,
+  phone VARCHAR( 15 ) NOT NULL, 
+PRIMARY KEY (phone) );
+
+NSERT INTO PHONEBOOK
+(name, city, phone )
+VALUES
+('Ricky', 'Jakarta', '087654321' );
+
+SELECT *
+FROM PHONEBOOK
+WHERE phone = '087654321';
+
+DELETE FROM PHONEBOOK
+WHERE phone = '087654321';
+
+UPDATE PHONEBOOK 
+SET NAME = 'not Ricky', 
+    CITY = 'not Jakarta' 
+WHERE PHONE = '087654321';
